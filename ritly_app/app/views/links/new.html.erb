@@ -1,0 +1,8 @@
+<h1>Create new link</h1>
+
+<%= form_for @link do |f| %>
+  <%= label_tag(:url, "url: ") %>
+  <%= f.text_field :url %></br>
+  <%= f.hidden_field :random_string, { :value => SecureRandom.urlsafe_base64(8) } %>
+	<%= f.submit "Submit" %>
+<% end %>
