@@ -2,7 +2,10 @@ RitlyApp::Application.routes.draw do
   
 resources :links
 
-root 'links#index'
+root 'links#new'
+
+get '/:rando', to: 'links#redirecty'
+# get '/:rando/preview', to 'links#preview'
 
 end
 

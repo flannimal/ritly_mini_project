@@ -1,5 +1,7 @@
 <h1>Link Show</h1>
 <p>URL: <%= @link.url%></p>
-<p>Random: <%= @link.random_string%></p>
+<p>Random: <%= @link.random_string%></p>        <!-- need to add a href -->
 
-<%= link_to "-Index-",links_path%>
+<%= link_to "-Home-", new_link_path%>
+<%= link_to "-Index-", links_path%> 
+     

@@ -16,28 +16,6 @@ class LinksController < ApplicationController
 		@link = Link.create link_params
 		redirect_to link_path(@link)
 	end
-	# random_token = SecureRandom.urlsafe_base64(nil, false)
-
-	# def C2
- #    link = params.require(:link).permit(:url, :random_string)
- #    custom_string = params[:link][:random_string]
- #    full_link_url = complete_url(link[:url])
-
- #    if custom_string == ""
- #      random_string = SecureRandom.urlsafe_base64(10)
- #      @link = Link.create(url: full_link_url, random_string: random_string)
- #      redirect_to link_path(@link.id)
- #    elsif unique_code?(custom_string)
- #      @link = Link.create(url: full_link_url, random_string: custom_string)
- #      redirect_to link_path(@link.id)
- #    else
- #      @link = Link.new
- #      flash[:error] ="sorry! that link is in use!"
- #      render :new
- #    end
-
-
-
 
 	def edit
 		@link = Link.find(params[:id])
@@ -47,6 +25,15 @@ class LinksController < ApplicationController
 		@link = Link.find(params[:id])
 		@link.update link_params
 		redirect_to link_params(@link)
+	end
+
+	def redirecty
+		@link = Link.find_by random_string: params[:rando]
+		if @link
+			redirect_to @link.url
+		else
+			redirect_to root_path
+		end
 	end
 
 	def destroy
