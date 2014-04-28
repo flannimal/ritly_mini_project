@@ -1,15 +1,46 @@
-<%= link_to "New link", new_link_path %>    
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset-UTF-8">
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="assets/stylesheets/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="assets/stylesheets/bootstrap.min.css">	
+		<link rel="stylesheet" type="text/css" href="assets/stylesheets/my_custom.css"> 
+		<script src="assets/javascripts/respond.js"> </script>
+	</head>
 
+	<header class="jumbotron">
+				<!-- <div class="row"> -->
+					<div class="col-lg-12 col-offset-6 centered">
+							<h1> Link Index </h1>
+					</div>
+	</header> 
 
-<h1> RITLY </h1>
+	<div class="container two_buttons">
+					<br>
+					<button type="button" class="btn btn-default"><%= link_to "Home", new_link_path%></button> 
+					<button type="button" class="btn btn-default"><%= link_to "Index", links_path%></button>
+	</div> 
 
-<% @links.each do |link| %>
-    <li> 
-    	<%= link_to link.url, link_path(link.id) %> 
-    	<%= link.random_string %>
-    	<%= link_to "edit", edit_link_path(link.id) %>
-    	<%= link_to "delete", link, method: :delete, data: {confirm: "y/n?"} %>
+	<body>
+		<div class="container list">
+			<% @links.each do |link| %>
+			  <li>
+			    	<%= link_to link.url, link_path(link.id) %> 
+			    	<%= link_to link.random_string, link.url %> 
+			    	<button type="button" class="btn btn-inverse btn-xs"><%= link_to "Edit", edit_link_path(link.id)%></button> 
+			    	<button type="button" class="btn btn-danger btn-xs"><%= link_to "Delete", link, method: :delete, data: {confirm: "Are you sure you'd like to delete this link?"} %></button> 
+		    		<% end %>
+			  </li>
+	  </div> <!-- list container -->
 
-    </li>
+	 </body>
+	 
+	 <footer>
+		<!-- javasript -->
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script type="text/javascript" src="assets/javascripts/bootstrap.min.js"></script>
 
-<% end %>
+	</footer>   

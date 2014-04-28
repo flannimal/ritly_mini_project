@@ -24,3 +24,22 @@ body {
   text-align: center;
   background-color: #F5F5F5;
 }
+
+.show_box {
+  margin: 2px 0;
+  width: auto;
+  text-align: center;
+  background-color: #F5F5F5;
+}
+
+.two_buttons {
+  margin: auto; 
+  text-align: center;
+  float: none;
+}
+
+.list {
+  padding: 5px;
+  margin: auto; 
+  float: none;
+}

@@ -23,8 +23,9 @@ class LinksController < ApplicationController
 
 	def update
 		@link = Link.find(params[:id])
-		@link.update link_params
+		@link.update link_params   #link_params is a method defined below in private
 		redirect_to link_params(@link)
+		#links/:id(.:format)      links#update
 	end
 
 	def redirecty
