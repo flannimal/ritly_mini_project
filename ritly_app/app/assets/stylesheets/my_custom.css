@@ -1,0 +1,26 @@
+/* custom CSS  */
+
+
+body {
+            /* background: url('http://miriadna.com/desctopwalls/images/max/Green-nature.jpg') no-repeat center; */
+						background: url('http://www.dream-wallpaper.com/free-wallpaper/nature-wallpaper/wonderful-green-nature-wallpapers-1-wallpaper/1280x1024/free-wallpaper-4.jpg') no-repeat center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+       }
+
+
+.jumbotron {
+  margin: 5px 0;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #D3D3D3;
+}
+
+.search_box {
+  margin: 2px 0;
+  width: auto;
+  text-align: center;
+  background-color: #F5F5F5;
+}

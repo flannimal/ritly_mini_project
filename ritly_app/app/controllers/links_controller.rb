@@ -41,6 +41,7 @@ class LinksController < ApplicationController
 		redirect_to root_path
 	end
 
+#-------------------------------------------------------------------
 
 private
 	def link_params 

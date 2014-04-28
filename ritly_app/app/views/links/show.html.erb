@@ -1,7 +1,36 @@
-<h1>Link Show</h1>
-<p>URL: <%= @link.url%></p>
-<p>Random: <%= @link.random_string%></p>        <!-- need to add a href -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset-UTF-8">
+		<meta charset="utf-8">
+			<h1>Link</h1>
+		<link rel="stylesheet" type="text/css" href="assets/stylesheets/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="assets/stylesheets/bootstrap.min.css">	
+		<link rel="stylesheet" type="text/css" href="assets/stylesheets/my_custom.css"> 
+		<script src="assets/javascripts/respond.js"> </script>
+	</head>
+	
+	<body>
+			<p>URL: <%= @link.url%></p>
+			<p>Random: <%= link_to @link.random_string, @link.url %> </p> 
+					<p><button type="button" class="btn btn-default"><%= link_to "Home", new_link_path%></button></p>
+					<p><button type="button" class="btn btn-default"><%= link_to "Index", links_path%></button></p>
 
-<%= link_to "-Home-", new_link_path%>
-<%= link_to "-Index-", links_path%> 
-     
+	</body>	
+
+	<footer>
+		<!-- javasript -->
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script type="text/javascript" src="assets/javascripts/bootstrap.min.js"></script>
+	</footer>
+
+</html>
+
+<!-- any image -->
+<!-- img src="" class="img-responsive" -->
+
+	<!-- 				<div class="jumbotron"> -->
+	<!-- 	      <img src="img/j" alt="" class="pull-right"  -->
+	<!-- 				</div>  --> 

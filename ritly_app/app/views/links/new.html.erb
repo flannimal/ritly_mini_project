@@ -1,9 +1,57 @@
-<h1>Create new link</h1>
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset-UTF-8">
+		<meta charset="utf-8">
+		<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">  -->
+		<title>
+			RITLY
+		</title>
 
-<%= form_for @link do |f| %>
-  <%= label_tag(:url, "Please enter URL: ") %>
-  <br>
-  <%= f.text_field :url %></br>
-  <%= f.hidden_field :random_string, { :value => SecureRandom.urlsafe_base64(8) } %>
-	<%= f.submit "Submit", class: "btn btn-default" %>
-<% end %>
+		<!-- bootstrap --> 
+		<link rel="stylesheet" type="text/css" href="assets/stylesheets/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="assets/stylesheets/bootstrap.min.css">	
+		<link rel="stylesheet" type="text/css" href="assets/stylesheets/my_custom.css"> 
+		<script src="assets/javascripts/respond.js"> </script>
+	</head>	
+
+		<!-- row 1 -->
+		<header class="jumbotron">
+			<!-- <div class="row"> -->
+				<div class="col-lg-12 col-offset-6 centered">
+					<h1>	Shorten new link</h1>
+				</div>
+		</header>
+
+		<body> 
+				<div class="container">
+						<div class="row">
+								<div class="col-lg">
+									<!-- <img src="assets/stylesheets/ritly_pics/5" class="img-responsive img-rounded"> -->
+								</div>
+						</div> <!-- row -->
+				</div><!--container-->
+
+				<div class="container back_body">
+						<!-- <div class="row">  -->
+							<!-- <div class="col-md-2 col-md-offset-0">  -->
+								<!-- embedded ruby  -->
+								<%= form_for @link do |f| %>
+								  <%= label_tag(:url, "Please enter URL: ") %><br>
+								  <%= f.text_field :url, :placeholder => "paste here"%></br>
+								  <%= f.hidden_field :random_string, { :value => SecureRandom.urlsafe_base64(8) } %>
+									<%= f.submit "Submit", class: "btn btn-primary" %>
+								<% end %>
+				</div> <!-- search_box -->
+	</body>
+
+
+	<footer>
+		<!-- javasript -->
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script type="text/javascript" src="assets/javascripts/bootstrap.min.js"></script>
+	</footer>
+
+<html>

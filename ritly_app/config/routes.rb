@@ -3,6 +3,7 @@ RitlyApp::Application.routes.draw do
 resources :links
 
 root 'links#new'
+# root :to => "links#new"    same result as above line?
 
 get '/:rando', to: 'links#redirecty'
 # get '/:rando/preview', to 'links#preview'
